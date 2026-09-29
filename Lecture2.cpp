@@ -34,5 +34,12 @@ int main()
     Why is the class consotructoin in the order that it is?
         - Well, the constructor can access member variables - cannot have undefined variables 
     Construction
+        - Say we have a class MyClass with a constructor that takes an int (and uses it in the constructor)
+        - will throw an error if value not passes on construction
+        - But we can use the initializer list to bypass the need for initialising in the member variables directly
+            - Alloows explicitly passed in values
+        - Best practice is to have order of variables in intializer list in same order as written in class
+    Lets review (pased off of picture)
+        Gassy d("David"); --> belly_ ---> 5 attributed to belly_ ---> name itialized --> name given David value by constructor
     */
 }
