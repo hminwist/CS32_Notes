@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 int main()
 {
     /*
@@ -41,5 +43,51 @@ int main()
         - Best practice is to have order of variables in intializer list in same order as written in class
     Lets review (pased off of picture)
         Gassy d("David"); --> belly_ ---> 5 attributed to belly_ ---> name itialized --> name given David value by constructor
+    Overloaded Constructors
+        - We can have as many constructors as possible - same as function overlading
+    See third image
+        - the constructor will only skip the third line in this - bc its only defining a pointer 
+    Summary of Constructors
+        - A constructor is a function that initializes an ojbect when its first created
+        - First call calls the constructors for an objects non primitive memters
+        - we use an initializer list to initialize member variables that reuire parameters for construction 
+        - Constructors run everytime we define a new object 
+        - But do not run if defining a pointer
+        - we can overlatd constructors
+    Destructors
+        - Frees all the resources that an object allocates during its lifetime
+        - An object often reserves system resources as it runs
+        - Destructors ensure that its managed we;
+        Example
+            - Problems - The temp files are never deleted
+        - Any time a class allocates a system resources (reserves using the new command)
+        - We must have destructore that frees the memory with the delete function
+        Example 2
+            - Destruction haappens in the reverse order in the construction phase
+        Phase 0 
+            - C++ runs object d's destructor body first
+        Phase 1
+            - C++ destructs all non-primitive member variables in the reverse order they appear in the class 
+        Phase 2
+            - Well learn about this later
+        If not destructor is defined - there exists a default destructuor 
+        Example 3
+            Ans: Finally relieved -> gurgle gurgle -> mmm rotten bananas
+        The constructors body is used first because the destructor can still access member variables
+        Summary
+            - Frees all resources
+            - Runs body first
+            - then non primitive variables 
+            - Run every time at the lifetimes end
+            - When we exit a block where a local variable was definedd and when we delete an object through a pointer 
+    Address and Pointers
+        - An Address is a number identifying the starting location of a variable in RAM
+        - We get a variable's address by the the ampersan symbol
+        - An address itself is NOT a variable (guess)
+    Pointers 
+        - A pointer is a variable - they hold values like o ther variables
+        - they hold the memory address 
+        - Pointers must have a type - tells us what type of variable it points at 
+    The * or the dereference operator takes the address of the pointer variable and uses it to get the value stored at the location in memory   
     */
 }
