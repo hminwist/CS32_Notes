@@ -88,6 +88,7 @@ int main()
         - A pointer is a variable - they hold values like o ther variables
         - they hold the memory address 
         - Pointers must have a type - tells us what type of variable it points at 
-    The * or the dereference operator takes the address of the pointer variable and uses it to get the value stored at the location in memory   
+    The * or the dereference operator takes the address of the pointer variable and uses it to get the value stored at the location in memory 
+    Can modified values of stuff from one function in another function   
     */
 }
