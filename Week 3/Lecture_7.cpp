@@ -62,8 +62,31 @@ int main()
             1 - c++ constructs all non primitive member variables
             2 - c++ runs the body of the constructor
             3 - Return and construct B
-         
-
+         Further consider the following
+            - Duck is a subclass of Animal
+                - Animal has a constructor that takes an in
+            - When we try to initialize Duck (calling the empty constructor for Animal), it fails
+                - Why? Because we didnt pass anything into the thing
+            - We must give the parent class a value for construction
+                - This is done via the initialization list
+            - The Duck constructor would look like the following
+                - Duck() : Animal(myInt){// DUCK CONSTRUCTOR }
+            - If Duck has member objects whose constructors require parameters, we must PUT THEM ON THE INTIALIZATION LIST
+            - EXAMPLE
+                Duck daffy
+                    - Sets Animal lbs constructor to myInt
+            - Can also do
+                Duck(int passAnimal) : Animal(passAnimal)
+            - If we further define the class Mallard as a subclass of duck, and a subsub class of Aniaml
+                - in Mallard(string &name): Duck(5,10)
+                - in Duck(int lbs, int numF):Animal(lbs))
+                - in Animal(int lbs)
+                - WHAT HAPPENS: in Main, we do Mallard(int); 
+                    Then the constructor of mallard constructs and initialises Animal, initialises Animal
+        Destruction
+             - 0 - Runs Destructor Body
+             - 1 - Destructs all non primitive members in the revers order they appear in the class
+             - 2 What is this? - If We are destructing a subclass, then we move one up and start the destruction of the super class 
     */
    
 }
